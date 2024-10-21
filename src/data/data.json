@@ -1,0 +1,37 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "TuneHouse",
+        "description": "TuneHouse is an innovative edtech music academy project built using Next.js, TypeScript, Tailwind CSS, and the Aeternity UI library, providing an engaging platform for students to learn music through interactive courses.",
+        "image": "/projects/tunehouseimage.jpg",
+        "github": "https://github.com/amanpandey3956/TuneHouse",
+        "demo": "https://tune-house.vercel.app/"
+      },
+      {
+        "id": 2,
+        "title": "Appwrite Blog",
+        "description": "Developed a dynamic blogging platform using ReactJS, Appwrite, and Tailwind CSS. The site features user authentication, allowing users to create, edit, and delete their own blog posts, as well as upload images.",
+        "image": "/projects/appwriteblog.jpg",
+        "github": "https://github.com/amanpandey3956/Appwrite-Blog",
+        "demo": "https://appwrite-blog-vert.vercel.app/" 
+      },
+      {
+        "id": 3,
+        "title": "Nike Landing Page",
+        "description": "Created an engaging Nike landing page using ReactJS and Tailwind CSS. The site features a visually appealing design that showcases products with responsive layouts and smooth animations. Leveraged Tailwind CSS for rapid styling, ensuring a seamless user experience across devices.",
+        "image": "/projects/nikewebsite.jpg",
+        "github": "https://github.com/amanpandey3956/Nike-Website",
+        "demo": "https://nike-website-sage-eight.vercel.app/" 
+      },
+      {
+        "id": 4,
+        "title": "Viable English",
+        "description": "Developed the Viable English website using HTML, CSS, and JavaScript, focusing on creating an interactive and user-friendly platform for English language learning. The site features engaging content, responsive design, and dynamic elements to enhance user experience.",
+        "image": "/projects/viableEnglish.jpg",
+        "github": "https://github.com/amanpandey3956/Viable-English-Website",
+        "demo": "https://amanpandey3956.github.io/Viable-English-Website/"
+      }
+    ]
+}
+  
