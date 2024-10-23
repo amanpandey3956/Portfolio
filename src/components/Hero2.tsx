@@ -18,10 +18,10 @@ export function Hero2() {
 
       <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center lg:items-start justify-between p-4">
         <div className="w-full lg:w-2/3 flex flex-col items-center lg:items-start justify-start mb-8 lg:mb-0 h-full">
-          <h1 className="mt-32 lg:mt-24 text-5xl font-bold bg-clip-text text-transparent text-white text-center lg:text-left lg:ml-48">
+          <h1 className="lg:px-0 sm:px-16 md:px-10 mt-32 lg:mt-24 text-5xl font-bold bg-clip-text text-transparent text-white text-center lg:text-left lg:ml-48">
             Let Me <span className="text-purple-400">Introduce</span> Myself
           </h1>
-          <p className="mt-16 lg:mt-14 text-lg lg:text-justify font-semibold bg-clip-text text-transparent text-white text-justify lg:ml-24">
+          <p className="lg:px-0 sm:px-16 md:px-10 mt-16 lg:mt-14 text-lg lg:text-justify font-semibold bg-clip-text text-transparent text-white text-justify lg:ml-24">
             I&apos;m a Frontend Focused Web Developer Driven by a passion for digital transformation, I am a versatile frontend developer specializing in creating seamless and engaging user experiences.
             <br /><br />
             As a dedicated frontend developer, I am committed to driving digital transformation through innovative web solutions. My approach combines technical proficiency with a strategic mindset, enabling me to translate complex challenges into effective, user-centric designs. My experience spans building dynamic applications with React.js, Next.js, TypeScript, and integrating libraries like Framer Motion for enhanced interactivity. I embrace emerging technologies and innovative frameworks to push the boundaries of what is possible in web development.

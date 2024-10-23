@@ -15,6 +15,7 @@ export function Hero() {
           particleColor="#FFFFFF"
         />
       </div>
+      
       <div className="p-4 relative z-10 w-full text-center">
         <h1
           className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
@@ -26,6 +27,16 @@ export function Hero() {
         >
           A <span className="text-blue-300">Frontend Developer</span> who crafts sleek and responsive web experiences using React, Next.js, and Tailwind CSS
         </p>
+
+        <div className="relative mt-12 md:mt-14">
+          <a href="/resume.pdf" download="Aman_Pandey_Resume.pdf">
+            <button
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition-colors duration-300"
+            >
+              Download My Resume
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );
