@@ -21,12 +21,12 @@ export function Hero2() {
           <h1 className="lg:px-0 sm:px-16 md:px-10 mt-32 lg:mt-24 text-5xl font-bold bg-clip-text text-transparent text-white text-center lg:text-left lg:ml-48">
             Let Me <span className="text-purple-400">Introduce</span> Myself
           </h1>
-          <p className="lg:px-0 sm:px-16 md:px-10 mt-16 lg:mt-14 text-lg lg:text-justify font-semibold bg-clip-text text-transparent text-white text-justify lg:ml-24">
-            I&apos;m a Frontend Focused Web Developer Driven by a passion for digital transformation, I am a versatile frontend developer specializing in creating seamless and engaging user experiences.
+          <p className="lg:px-0 sm:px-16 md:px-10 mt-16 lg:mt-14 text-lg lg:text-justify font-semibold font-sans bg-clip-text text-transparent text-white text-justify lg:ml-24">
+            I&apos;m a Frontend Focused <span className="text-purple-400">Web Developer</span> Driven by a passion for digital transformation, I am a versatile frontend developer specializing in creating seamless and engaging user experiences.
             <br /><br />
-            As a dedicated frontend developer, I am committed to driving digital transformation through innovative web solutions. My approach combines technical proficiency with a strategic mindset, enabling me to translate complex challenges into effective, user-centric designs. My experience spans building dynamic applications with React.js, Next.js, TypeScript, and integrating libraries like Framer Motion for enhanced interactivity. I embrace emerging technologies and innovative frameworks to push the boundaries of what is possible in web development.
+            As a dedicated <span className="text-purple-400">frontend developer</span>, I am committed to driving digital transformation through innovative web solutions. My approach combines technical proficiency with a strategic mindset, enabling me to translate complex challenges into effective, user-centric designs. My experience spans building dynamic applications with <span className="text-purple-400">React.js</span>, <span className="text-purple-400">Next.js</span>, <span className="text-purple-400">TypeScript</span>, and integrating libraries like <span className="text-purple-400">Framer Motion</span> for enhanced interactivity. I embrace emerging technologies and innovative frameworks to push the boundaries of what is possible in web development.
             <br /><br />
-            I&apos;m open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don&apos;t hesitate to contact me.
+            I&apos;m open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don&apos;t hesitate to <span className="text-purple-400">contact me</span>.
           </p>
         </div>
 

@@ -72,7 +72,7 @@ function ContactUs() {
         {submitted ? (
           <p className="text-center text-green-500">Thank you! Your message has been sent.</p>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 mt-8">
+          <form onSubmit={handleSubmit} className="space-y-4 text-white mt-8">
             <input
               type="text"
               name="name"

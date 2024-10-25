@@ -20,12 +20,12 @@ export function Hero() {
         <h1
           className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          Hey, I&apos;m <span className="text-blue-300">Aman Pandey</span>
+          Hey, I&apos;m <span className="text-blue-400">Aman Pandey</span>
         </h1>
         <p
           className="mt-10 text-xl md:text-2xl font-bold bg-clip-text max-w-2xl mx-auto text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          A <span className="text-blue-300">Frontend Developer</span> who crafts sleek and responsive web experiences using React, Next.js, and Tailwind CSS
+          A <span className="text-purple-400">Frontend Developer</span> who crafts sleek and responsive web experiences using <span className="text-purple-400">React</span>, <span className="text-purple-400">Next.js</span>, and <span className="text-purple-400">Tailwind CSS</span>
         </p>
 
         <div className="relative mt-12 md:mt-14">
