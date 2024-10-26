@@ -46,7 +46,7 @@ const About = () => {
         setBlockMargin(1); // Adjust margin for small screens
         setFontSize(12); // Adjust text size for mobile
       } else if (screenWidth < 768) {
-        setBlockSize(7); // Medium screen (Tablet)
+        setBlockSize(6); // Medium screen (Tablet)
         setBlockMargin(1); // Adjust margin for tablets
         setFontSize(14); // Slightly bigger text for tablets
       } else {
@@ -148,7 +148,7 @@ const About = () => {
       {/* Tools I Use Section */}
       <div className="relative z-10 text-center mt-8">
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-8 text-white">
-          Tools <strong className="text-purple-300">I Use</strong>
+          My <strong className="text-purple-300">Tech Stack</strong>
         </h1>
       </div>
 
@@ -170,7 +170,7 @@ const About = () => {
       {/* Days I Code Section */}
       <div className="relative z-10 text-center mt-8 text-white">
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-8 text-white">
-          Days I <strong className="text-purple-300">Code</strong>
+          My Code <strong className="text-purple-300">Calendar</strong>
         </h1>
         <div className="flex justify-center mt-12 pb-10 relative z-10">
           <GitHubCalendar
