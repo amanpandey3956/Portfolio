@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 import React, { useState } from "react";
 import { Menu, MenuItem } from "./ui/navbar-menu";
 import Link from "next/link";
@@ -47,23 +47,25 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
         </Link>
       </Menu>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="flex flex-col md:hidden bg-black text-white p-4">
-          <Link href={"/"} onClick={() => setIsOpen(false)} className="mb-4">
-            <MenuItem setActive={setActive} active={active} item="Home" icon={AiOutlineHome} className="text-lg" />
-          </Link>
-          <Link href={"/about"} onClick={() => setIsOpen(false)} className="mb-4">
-            <MenuItem setActive={setActive} active={active} item="About" icon={AiOutlineUser} className="text-lg" />
-          </Link>
-          <Link href={"/projects"} onClick={() => setIsOpen(false)} className="mb-4">
-            <MenuItem setActive={setActive} active={active} item="Projects" icon={AiOutlineFundProjectionScreen} className="text-lg" />
-          </Link>
-          <Link href={"/contact"} onClick={() => setIsOpen(false)} className="mb-4">
-            <MenuItem setActive={setActive} active={active} item="Contact" icon={AiOutlineMail} className="text-lg" />
-          </Link>
-        </div>
-      )}
+      {/* Smooth Opening Mobile Menu */}
+      <div
+        className={`fixed inset-x-0 top-16 p-4 bg-black text-white rounded-lg shadow-lg flex flex-col md:hidden transition-opacity duration-300 ease-in-out transform ${
+          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+      >
+        <Link href={"/"} onClick={() => { setActive('Home'); setIsOpen(false); }} className="mb-4">
+          <MenuItem setActive={setActive} active={active} item="Home" icon={AiOutlineHome} className="text-lg" />
+        </Link>
+        <Link href={"/about"} onClick={() => { setActive('About'); setIsOpen(false); }} className="mb-4">
+          <MenuItem setActive={setActive} active={active} item="About" icon={AiOutlineUser} className="text-lg" />
+        </Link>
+        <Link href={"/projects"} onClick={() => { setActive('Projects'); setIsOpen(false); }} className="mb-4">
+          <MenuItem setActive={setActive} active={active} item="Projects" icon={AiOutlineFundProjectionScreen} className="text-lg" />
+        </Link>
+        <Link href={"/contact"} onClick={() => { setActive('Contact'); setIsOpen(false); }} className="mb-4">
+          <MenuItem setActive={setActive} active={active} item="Contact" icon={AiOutlineMail} className="text-lg" />
+        </Link>
+      </div>
     </div>
   );
 };
