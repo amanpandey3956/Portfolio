@@ -42,12 +42,12 @@ const About = () => {
         setBlockMargin(1); // Reduce margin
         setFontSize(12); // Adjust text size
       } else if (screenWidth < 480) {
-        setBlockSize(7); // Small screen (Mobile)
-        setBlockMargin(2); // Adjust margin for small screens
-        setFontSize(13); // Adjust text size for mobile
+        setBlockSize(5); // Small screen (Mobile)
+        setBlockMargin(1); // Adjust margin for small screens
+        setFontSize(12); // Adjust text size for mobile
       } else if (screenWidth < 768) {
-        setBlockSize(10); // Medium screen (Tablet)
-        setBlockMargin(3); // Adjust margin for tablets
+        setBlockSize(7); // Medium screen (Tablet)
+        setBlockMargin(1); // Adjust margin for tablets
         setFontSize(14); // Slightly bigger text for tablets
       } else {
         setBlockSize(15); // Larger screens (Desktop)
