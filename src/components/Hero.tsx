@@ -18,20 +18,20 @@ export function Hero() {
       
       <div className="p-4 relative z-10 w-full text-center">
         <h1
-          className="mt-20 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+          className="mt-20 md:mt-0 text-4xl lg:text-7xl sm:text-5xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          Hey, I&apos;m <span className="text-blue-400">Aman Pandey</span>
+          Hey, I&apos;m Aman Pandey
         </h1>
-        <p
-          className="mt-10 text-xl md:text-2xl font-bold bg-clip-text max-w-2xl mx-auto text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+        <h1
+          className="mt-6 lg:text-3xl text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text max-w-2xl mx-auto text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          A <span className="text-purple-400">Frontend Developer</span> who crafts sleek and responsive web experiences using <span className="text-purple-400">React</span>, <span className="text-purple-400">Next.js</span>, and <span className="text-purple-400">Tailwind CSS</span>
-        </p>
+          ReactJS Developer @Travel Eco
+        </h1>
 
-        <div className="relative mt-12 md:mt-14">
+        <div className="relative mt-8 md:mt-8">
           <a href="/resume.pdf" download="Aman_Pandey_Resume.pdf">
             <button
-              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition-colors duration-300"
+              className="px-6 py-3 bg-transparent border border-zinc-700 font-semibold hover:border-emerald-400 shadow-sm text-emerald-400 rounded-md"
             >
               Download My Resume
             </button>

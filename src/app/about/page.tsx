@@ -84,10 +84,10 @@ const About = () => {
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-16">
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-4 text-white">
-                Know Who <span className="text-purple-300">I'M</span>
+                Know Who <span className="text-emerald-400">I'M</span>
               </h1>
               <p className="text-lg md:text-xl lg:text-xl text-gray-300 mt-6 text-justify">
-                Hey Everyone, I am <span className="text-purple-300">Aman Ajay Pandey</span> from <span className="text-purple-300">Maharashtra, India</span>.
+                Hey Everyone, I am Aman Ajay Pandey from Maharashtra, India.
                 <br />
                 <br />
                 I have completed my B.Tech in Electronics and Telecommunication from Deogiri Institute of Engineering and Management Studies.
@@ -99,10 +99,10 @@ const About = () => {
 
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-4 text-white">
-                My <span className="text-purple-300">Experience</span>
+                My <span className="text-emerald-400">Experience</span>
               </h1>
               <div className="mt-6 text-justify">
-                <h2 className="text-lg md:text-xl lg:text-xl font-bold text-purple-300">
+                <h2 className="text-lg md:text-xl lg:text-xl font-bold text-emerald-400">
                   Java Developer Intern, Capgemini - FUEL
                 </h2>
                 <p className="text-gray-300 mt-2 text-lg md:text-xl lg:text-xl">
@@ -110,7 +110,7 @@ const About = () => {
                 </p>
               </div>
               <div className="mt-4 text-justify">
-                <h2 className="text-lg md:text-xl lg:text-xl font-bold text-purple-300">
+                <h2 className="text-lg md:text-xl lg:text-xl font-bold text-emerald-400">
                   Technical Associate at IETE DIEMS ISF
                 </h2>
                 <p className="text-gray-300 mt-2 text-lg md:text-xl lg:text-xl">
@@ -125,7 +125,7 @@ const About = () => {
       {/* Professional Skillset Section */}
       <div className="relative z-10 text-center mt-20">
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-8 text-white">
-          Professional <strong className="text-purple-300">Skillset</strong>
+          Professional <strong className="text-emerald-400">Skillset</strong>
         </h1>
       </div>
 
@@ -148,7 +148,7 @@ const About = () => {
       {/* Tools I Use Section */}
       <div className="relative z-10 text-center mt-8">
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-8 text-white">
-          My <strong className="text-purple-300">Tech Stack</strong>
+          My <strong className="text-emerald-400">Tech Stack</strong>
         </h1>
       </div>
 
@@ -170,7 +170,7 @@ const About = () => {
       {/* Days I Code Section */}
       <div className="relative z-10 text-center mt-8 text-white">
         <h1 className="text-4xl md:text-4xl lg:text-5xl font-sans font-bold mb-8 text-white">
-          My Code <strong className="text-purple-300">Calendar</strong>
+          My Code <strong className="text-emerald-400">Calendar</strong>
         </h1>
         <div className="flex justify-center mt-12 pb-10 relative z-10">
           <GitHubCalendar
