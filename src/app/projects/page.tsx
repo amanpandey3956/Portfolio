@@ -38,7 +38,7 @@ const ProjectsPage: React.FC = () => {
         <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-sans font-bold text-white">
           My <span className="text-emerald-400">Projects</span>
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-gray-300 mt-6">
+        <p className="text-lg sm:text-lg md:text-xl lg:text-xl xl:text-2xl text-gray-300 mt-6">
           Take a look at some of my recent projects that showcase my skills.
         </p>
       </div>
