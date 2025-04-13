@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import typography from '@tailwindcss/typography';
 
+type Theme = (key: string) => string | undefined;
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,7 +11,7 @@ const config: Config = {
   darkMode:'class',
   theme: {
     extend: {
-      typography: (theme) => ({
+      typography: (theme:Theme) => ({
         DEFAULT: {
           css: {
             h1: {
