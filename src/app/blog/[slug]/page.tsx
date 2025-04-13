@@ -7,6 +7,7 @@ import remark2rehype from 'remark-rehype'
 import rehypeRaw from 'rehype-raw'
 import stringify from 'rehype-stringify'
 import breaks from 'remark-breaks';
+import rehypePrettyCode from 'rehype-pretty-code'
 
 interface Props {
   params: {
@@ -32,7 +33,10 @@ export default async function BlogPage({ params }: Props) {
     .use(parse)
     .use(breaks)
     .use(remark2rehype, { allowDangerousHtml: true }) 
-    .use(rehypeRaw) 
+    .use(rehypeRaw)
+    .use(rehypePrettyCode, {
+      theme: 'github-dark', 
+    }) 
     .use(stringify)
     .process(content)
 
@@ -42,7 +46,7 @@ export default async function BlogPage({ params }: Props) {
     <article className="text-gray-100 relative bg-gray-900 py-12 pt-56 overflow-auto">
       <div className="overflow-hidden mx-auto max-w-5xl prose prose-invert prose-lg">
         <h1 className="mb-8 text-3xl md:text-4xl lg:text-3xl text-emerald-400 font-bold">{data.title}</h1>
-        <div className='justify-start' dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </article>
   )
