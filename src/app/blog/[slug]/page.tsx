@@ -6,6 +6,7 @@ import parse from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import rehypeRaw from 'rehype-raw'
 import stringify from 'rehype-stringify'
+import breaks from 'remark-breaks';
 
 interface Props {
   params: {
@@ -29,6 +30,7 @@ export default async function BlogPage({ params }: Props) {
 
   const processedContent = await unified()
     .use(parse)
+    .use(breaks)
     .use(remark2rehype, { allowDangerousHtml: true }) 
     .use(rehypeRaw) 
     .use(stringify)
@@ -38,9 +40,9 @@ export default async function BlogPage({ params }: Props) {
 
   return (
     <article className="text-gray-100 relative bg-gray-900 py-12 pt-56 overflow-auto">
-      <div className="overflow-hidden mx-auto max-w-4xl prose prose-invert prose-lg">
+      <div className="overflow-hidden mx-auto max-w-5xl prose prose-invert prose-lg">
         <h1 className="mb-8 text-3xl md:text-4xl lg:text-3xl text-emerald-400 font-bold">{data.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div className='justify-start' dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </article>
   )
