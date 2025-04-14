@@ -21,11 +21,11 @@ export default function BlogListPage() {
   })
 
   return (
-    <div className="h-screen relative bg-gray-900 py-12 pt-40 overflow-hidden">
-      <div className="ml-8 p-8 space-y-2 max-w-2xl">
-        <h1 className="text-4xl md:text-4xl lg:text-5xl text-emerald-400 font-bold">My Blogs List</h1>
+    <div className="h-screen relative bg-gray-900 py-12 lg:pt-40 pt-24 md:pt-44 sm:pt-42 overflow-hidden">
+      <div className="lg:ml-8 md:ml-8 sm:ml-8 lg:p-8 p-6 space-y-2 max-w-xl">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl text-emerald-400 font-bold">My Blogs</h1>
         <p className="text-base sm:text-lg md:text-lg lg:text-lg text-gray-100">
-          My learnings and thoughts from frontend development and projects.
+          My learnings from frontend development and projects.
         </p>
         {blogs.map((blog) => (
           <Link key={blog.slug} href={`/blog/${blog.slug}`}>

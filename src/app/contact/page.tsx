@@ -1,6 +1,5 @@
 'use client';
 import React, { FormEvent, useState } from 'react';
-import { SparklesCore } from '@/components/ui/sparkles'; 
 
 function ContactUs() {
   const [email, setEmail] = useState('');
@@ -49,17 +48,6 @@ function ContactUs() {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-20 pt-32 relative overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        <SparklesCore
-          id="tsparticles-contact"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
 
       <div className="max-w-2xl mx-auto p-4 relative z-10">
         <h1 className="text-4xl md:text-4xl lg:text-5xl text-center font-sans font-bold mb-4 text-emerald-400">

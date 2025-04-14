@@ -5,7 +5,6 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import projectData from "@/data/data.json";
 import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
-import { SparklesCore } from "@/components/ui/sparkles"; 
 
 interface Project {
   id: number;
@@ -20,19 +19,7 @@ const ProjectsPage: React.FC = () => {
   const projects: Project[] = projectData.projects;
 
   return (
-    <div className="min-h-screen relative bg-black py-12 pt-40 overflow-hidden">
-
-      <div className="w-full absolute inset-0 h-full">
-        <SparklesCore
-          id="tsparticles-projects"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+    <div className="min-h-screen relative bg-gray-900 py-12 pt-40 overflow-hidden">
 
       <div className="relative z-10 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-sans font-bold text-white">

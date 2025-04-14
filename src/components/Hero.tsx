@@ -1,21 +1,8 @@
 "use client";
-import { SparklesCore } from "./ui/sparkles";
 
 export function Hero() {
   return (
-    <div className="h-screen relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-      <div className="w-full absolute inset-0 h-full">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
-      
+    <div className="h-screen relative w-full bg-gray-900 flex flex-col items-center justify-center overflow-hidden">
       <div className="p-4 relative z-10 w-full text-center">
         <h1
           className="mt-20 md:mt-0 text-4xl lg:text-7xl sm:text-5xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
@@ -31,7 +18,7 @@ export function Hero() {
         <div className="relative mt-8 md:mt-8">
           <a href="/resume.pdf" download="Aman_Pandey_Resume.pdf">
             <button
-              className="px-6 py-3 bg-transparent border border-zinc-700 font-semibold hover:border-emerald-400 shadow-sm text-emerald-400 rounded-md"
+              className="px-6 py-3 bg-transparent border border-zinc-500 font-semibold hover:border-emerald-400 shadow-sm text-emerald-400 rounded-md"
             >
               Download My Resume
             </button>

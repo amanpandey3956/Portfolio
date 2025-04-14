@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { SparklesCore } from '@/components/ui/sparkles';
 import GitHubCalendar from "react-github-calendar";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
@@ -67,18 +66,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative bg-gray-100 dark:bg-gray-900 py-12 pt-40 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        <SparklesCore
-          id="tsparticles-contact"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+    <div className="min-h-screen relative bg-gray-100 dark:bg-gray-900 py-12 lg:pt-40 overflow-hidden pt-24 md:pt-44 sm:pt-42">
       <div className="relative z-10 flex justify-center mt-8">
         <div className="border-4 border-purple-200 p-8 rounded-lg max-w-4xl w-full custom-border">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-16">

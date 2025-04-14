@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   };
 
   return (
-    <div className={`absolute top-2 inset-x-0 max-w-3xl mx-auto z-50 ${className}`}>
+    <div className={`absolute top-1 inset-x-0 max-w-3xl mx-auto z-50 ${className}`}>
       <div className="flex items-center justify-between p-4">
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
           {isOpen ? <AiOutlineClose className="text-white text-3xl" /> : <AiOutlineMenu className="text-white text-3xl" />}

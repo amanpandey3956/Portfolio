@@ -1,21 +1,8 @@
 "use client";
-import { SparklesCore } from "./ui/sparkles";
 
 export function Hero2() {
   return (
-    <div className="min-h-screen relative w-full bg-gradient-to-b from-gray-1000 to-gray-1100 flex flex-col items-center justify-center overflow-hidden border-neutral-600">
-      <div className="w-full absolute inset-0 h-full">
-        <SparklesCore
-          id="tsparticlesfullpage2"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
-
+    <div className="min-h-screen relative w-full bg-gray-950 flex flex-col items-center justify-center overflow-hidden">
       <div className="relative z-10 w-full h-full flex flex-col lg:flex-row items-center lg:items-start justify-between p-4">
         <div className="w-full lg:w-2/3 flex flex-col items-center lg:items-start justify-start mb-8 lg:mb-0 h-full">
           <h1 className="lg:px-0 sm:px-10 md:px-10 mt-32 lg:mt-24 lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-semibold bg-clip-text text-transparent text-white text-center lg:text-left lg:ml-48">
@@ -42,7 +29,7 @@ export function Hero2() {
       {/* Button Section */}
       <div className="relative z-10 flex justify-center mt-12 lg:mt-12 mb-16 lg:mb-16">
         <a href="https://linktr.ee/Aman.Pandey" target="_blank" rel="noopener noreferrer">
-          <button className="px-6 py-3 text-emerald-400 border border-zinc-700 font-semibold rounded-md shadow-sm bg-transparent hover:border-emerald-400">
+          <button className="px-6 py-3 text-emerald-400 border border-zinc-400 font-semibold rounded-md shadow-sm bg-transparent hover:border-emerald-400">
             Connect with Me
           </button>
         </a>
