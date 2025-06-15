@@ -8,6 +8,8 @@ import rehypeRaw from 'rehype-raw'
 import stringify from 'rehype-stringify'
 import breaks from 'remark-breaks';
 import rehypePrettyCode from 'rehype-pretty-code'
+import rehypeSlug from 'rehype-slug'
+import { transformerCopyButton } from '@rehype-pretty/transformers'
 
 interface Props {
   params: {
@@ -34,8 +36,15 @@ export default async function BlogPage({ params }: Props) {
     .use(breaks)
     .use(remark2rehype, { allowDangerousHtml: true }) 
     .use(rehypeRaw)
+    .use(rehypeSlug)
     .use(rehypePrettyCode, {
-      theme: 'github-dark', 
+      theme: 'github-dark',
+      transformers: [
+      transformerCopyButton({
+        visibility: 'always',
+        feedbackDuration: 3_000,
+      }),
+    ], 
     }) 
     .use(stringify)
     .process(content)

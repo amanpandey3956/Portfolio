@@ -1,4 +1,5 @@
 "use client";
+import { Typewriter } from "react-simple-typewriter";
 
 export function Hero() {
   return (
@@ -9,10 +10,18 @@ export function Hero() {
         >
           Hey, I&apos;m Aman Pandey
         </h1>
-        <h1
-          className="mt-6 lg:text-3xl text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text max-w-2xl mx-auto text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
-        >
-          ReactJS Developer @Travel Eco
+
+        <h1 className="mt-6 lg:text-3xl text-xl sm:text-2xl md:text-2xl font-bold bg-clip-text max-w-2xl mx-auto text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          <Typewriter
+            words={["Frontend Developer @CloudRaft", "Ex-ReactJS Developer @Travel Eco"]}
+            loop={0} 
+            cursor={true}
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+            cursorBlinking={false}  
+          />
         </h1>
 
         <div className="relative mt-8 md:mt-8">

@@ -1,7 +1,9 @@
 ---
 title: "Master Redux Toolkit: From Basics to Building Simple React Todo App"
 slug: "redux-toolkit-guide"
-date: "2025-04-13"
+author: "Aman Pandey"
+authorImage: "/projects/myimg.jpg"
+date: "April 13, 2025"
 summary: "Redux Toolkit is the official, modern way to manage state in React apps. In this blog, you'll learn the core concepts of Redux Toolkit like slices, actions, and store setup in a simplified way. Then we’ll build a complete Todo app using Redux Toolkit step-by-step. Perfect for React devs looking to write cleaner, scalable code."
 tags: ["React", "Redux Toolkit", "State Management", "Frontend"]
 ---

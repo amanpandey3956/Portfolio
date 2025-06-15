@@ -8,6 +8,9 @@ interface BlogMeta {
   slug: string
   date: string
   summary: string
+  author: string
+  authorImage: string
+  banner:string
 }
 
 export default function BlogListPage() {
@@ -21,22 +24,30 @@ export default function BlogListPage() {
   })
 
   return (
-    <div className="h-screen relative bg-gray-900 py-12 lg:pt-40 pt-24 md:pt-44 sm:pt-42 overflow-hidden">
-      <div className="lg:ml-8 md:ml-8 sm:ml-8 lg:p-8 p-6 space-y-2 max-w-xl">
-        <h1 className="text-4xl md:text-4xl lg:text-5xl text-emerald-400 font-bold">My Blogs</h1>
-        <p className="text-base sm:text-lg md:text-lg lg:text-lg text-gray-100">
-          My learnings from frontend development and projects.
-        </p>
-        {blogs.map((blog) => (
-          <Link key={blog.slug} href={`/blog/${blog.slug}`}>
-            <div className="border mt-8 space-y-3 px-4 py-4 rounded">
-              <h2 className="text-gray-100 text-2xl font-semibold">{blog.title}</h2>
-              <span className="block text-base text-gray-100">{blog.date} . 9 min read</span>
-              <p className="text-gray-300">{blog.summary}</p>
+  <div className="h-screen relative bg-gray-900 py-12 lg:pt-40 pt-24 md:pt-44 sm:pt-42 overflow-hidden">
+    <h1 className="text-4xl md:text-4xl lg:text-5xl text-emerald-400 font-bold text-center mt-10">My Blogs</h1>
+    
+    <div className="flex flex-wrap justify-center gap-10 mt-20 px-6">
+      {blogs.map((blog) => (
+        <Link key={blog.slug} href={`/blog/${blog.slug}`} className="w-full sm:w-[90%] md:w-[45%] lg:w-[40%] xl:w-[30%]">
+          <div className="border space-y-3 px-4 py-4 rounded transition-transform duration-300 transform hover:scale-105 
+          hover:shadow-xl hover:shadow-emerald-400/10">
+            <h2 className="text-gray-100 text-2xl font-semibold">{blog.title}</h2>
+            <div className="flex items-center gap-2">
+              <img
+                src={blog.authorImage}
+                alt={blog.author}
+                className="w-14 h-14 rounded-full"
+              />
+              <span className="text-lg text-white">{blog.author}</span>
             </div>
-          </Link>
-        ))}
-      </div>
+            <span className="block text-base text-gray-100">{blog.date}</span>
+            <p className="text-gray-300">{blog.summary}</p>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
+  </div>
+)
+
 }
