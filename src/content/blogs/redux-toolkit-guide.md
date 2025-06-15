@@ -1,6 +1,7 @@
 ---
 title: "Master Redux Toolkit: From Basics to Building Simple React Todo App"
 slug: "redux-toolkit-guide"
+banner: "/projects/reduxjs.png"
 author: "Aman Pandey"
 authorImage: "/projects/myimg.jpg"
 date: "April 13, 2025"

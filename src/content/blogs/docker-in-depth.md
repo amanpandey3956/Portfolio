@@ -13,6 +13,8 @@ tags: ["Docker", "Containers"]
 
 Docker is a powerful platform designed to simplify the process of building, sharing, and running applications inside containers. A container is a lightweight, standalone environment that includes everything an application needs its code, libraries, and its all the dependencies so it runs reliably no matter where it's deployed.
 
+Containers can be started anywhere an [OCI container runtime](https://opencontainers.org/) is available, whether on your workstation with Docker, or in the cloud using orchestrators like Kubernetes. This narrows the gap between development and production.
+
 In this blog, we’ll guide you through everything from installing Docker to mastering its core concepts, supported by hands-on examples and practical use cases.
 
 ### Table of Contents
@@ -143,3 +145,152 @@ This Virtualization is the reason of below points:
 - **Compatibility** - VM of any OS can run on any OS host. 
 
 One of the key strengths of Virtual Machines (VMs) is their cross-platform compatibility. This works because the hypervisor creates a virtual hardware layer that abstracts away the underlying host OS. This allows the guest OS to operate as if it’s running on its native hardware, regardless of the actual host system. meanwhile Docker does not use a traditional hypervisor. Instead, it relies on OS-level virtualization, Docker uses the host machine's OS kernel directly to run containers.
+
+## Docker Commands with Example
+
+In this section, we'll get hands-on with Docker commands by working with a real-world public image present on Docker Hub i.e Redis. This will help you understand how Docker commands work in practice, from pulling images to running containers and inspecting them. Before jumping to our this topic, lets understand, **What is Docker Hub?**.
+
+Docker Hub is a container registry built for developers and open-source contributors to find, use, and share container images. It provides access to verified images from trusted publishers, official Docker images, and public or private repositories, making it easy to collaborate and distribute containerized applications securely and efficiently.
+
+Let’s start by pulling the official Redis image from Docker Hub: Visit [Docker Hub](https://hub.docker.com/) official Website.
+
+<img src="/projects/redis.png" alt="docker" style="margin-bottom: 28px;" />
+
+1. **Run Below Command to start pulling this public redis image from docker hub:**
+```bash
+docker pull redis
+```
+This command downloads the latest Redis image from Docker Hub to your local system, Below is the output of your above action.
+```bash
+[amanpandey@aman-fedora ~]$ docker pull redis
+Using default tag: latest
+latest: Pulling from library/redis
+dad67da3f26b: Pull complete 
+b90a44fe26dc: Pull complete 
+11c0ea983116: Pull complete 
+4bce6440352d: Pull complete 
+093c29d9fea9: Pull complete 
+4f4fb700ef54: Pull complete 
+b222156a9022: Pull complete 
+Digest: sha256:1b835e5a8d5db58e8b718850bf43a68ef5a576fc68301fd08a789b20b4eecb61
+Status: Downloaded newer image for redis:latest
+docker.io/library/redis:latest
+```
+2. **List all Local images**
+```bash
+docker images
+```
+After pulling redis image, above command will list all the images present in your local: Check Below
+```bash
+[amanpandey@aman-fedora ~]$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+redis        latest    c09c2832ba40   2 weeks ago   128MB
+```
+3. **Now once the image gets pulled, lets run the container from Redis Image by below command:**
+```bash
+docker run redis
+```
+After hitting this command your container started to run in **Attached mode**(remember this) and below is output:
+```bash
+[amanpandey@aman-fedora ~]$ docker run redis
+Starting Redis Server
+1:C 15 Jun 2025 19:05:35.855 
+1:C 15 Jun 2025 19:05:35.855 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 15 Jun 2025 19:05:35.855 * Redis version=8.0.2, bits=64, commit=00000000, modified=1, pid=1, just started
+1:C 15 Jun 2025 19:05:35.855 * Configuration loaded
+1:M 15 Jun 2025 19:05:35.856 * monotonic clock: POSIX clock_gettime
+1:M 15 Jun 2025 19:05:35.857 * Running mode=standalone, port=6379.
+1:M 15 Jun 2025 19:05:35.858 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+1:M 15 Jun 2025 19:05:35.858 * <bf> Registering configuration options: [
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ bf-error-rate       :      0.01 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ bf-initial-size     :       100 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ bf-expansion-factor :         2 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ cf-bucket-size      :         2 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ cf-initial-size     :      1024 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ cf-max-iterations   :        20 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ cf-expansion-factor :         1 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> 	{ cf-max-expansions   :        32 }
+1:M 15 Jun 2025 19:05:35.858 * <bf> ]
+1:M 15 Jun 2025 19:05:35.858 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+1:M 15 Jun 2025 19:05:35.861 * <search> Redis version found by RedisSearch : 8.0.2 - oss
+1:M 15 Jun 2025 19:05:35.861 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+1:M 15 Jun 2025 19:05:35.861 * <search> Low level api version 1 initialized successfully 
+1:M 15 Jun 2025 19:05:35.861 * <search> Initialized thread pools!
+1:M 15 Jun 2025 19:05:35.861 * <search> Disabled workers threadpool of size 0
+1:M 15 Jun 2025 19:05:35.861 * <search> Subscribe to config changes
+1:M 15 Jun 2025 19:05:35.861 * <search> Enabled role change notification
+1:M 15 Jun 2025 19:05:35.862 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+1:M 15 Jun 2025 19:05:35.862 * <search> Register write commands
+1:M 15 Jun 2025 19:05:35.863 * <timeseries> Redis version found by RedisTimeSeries : 8.0.2 - oss
+1:M 15 Jun 2025 19:05:35.865 * <ReJSON> Enabled diskless replication
+1:M 15 Jun 2025 19:05:35.865 * <ReJSON> Initialized shared string cache, thread safe: false.
+1:M 15 Jun 2025 19:05:35.865 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+1:M 15 Jun 2025 19:05:35.865 * <search> Acquired RedisJSON_V5 API
+1:M 15 Jun 2025 19:05:35.866 * Server initialized
+1:M 15 Jun 2025 19:05:35.866 * Ready to accept connections tcp
+```
+As you can see the current container running in **Attached Mode**, So if you want to terminate it then hit **ctrl c**, but again it will stops your running container. so if you want to avoid this then run your containers in **detach mode**. Run below Command for running your containers in detach mode.
+
+```bash
+docker run -d redis
+``` 
+The **-d** flag instructs the **Docker CLI** to detach from the container, leaving the process running in the background. You’ll be dropped back to your terminal prompt.
+
+4. **List all running containers:** Run **docker ps** 
+```bash
+[amanpandey@aman-fedora ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS      NAMES
+f42b6cda4b59   redis     "docker-entrypoint.s…"   9 seconds ago   Up 9 seconds   6379/tcp   flamboyant_nobel
+```
+5. **To see all your containers, including stopped and exited ones, add the -a flag:**
+```bash
+[amanpandey@aman-fedora ~]$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                     PORTS      NAMES
+f42b6cda4b59   redis     "docker-entrypoint.s…"   3 minutes ago    Up 3 minutes               6379/tcp   flamboyant_nobel
+77a836ac24cf   redis     "docker-entrypoint.s…"   56 minutes ago   Exited (0) 5 minutes ago              dreamy_bhabha
+```
+Now you are thinking, why we have two containers in this list? So the answer is every time you hit: **docker run redis**, Docker creates a brand new container instance from the redis image. That's because docker run is essentially a shortcut for two commands:
+```bash
+docker create redis  # creates a new container
+docker start <container-id>  # starts it
+```
+So when you run it multiple times, Docker keeps making new containers, even if you're using the same image. to avoid creating a new container each time use docker start instead of docker run.
+
+6. **The command provides each container’s ID and current status**
+- To get more detailed information about an individual container, pass its ID or name to docker inspect:
+```bash
+docker inspect 77a836ac24cf 
+```
+
+7. **Starting, Stopping, and Deleting Containers**
+
+- Detached containers can be stopped by passing their ID or name to the **docker stop** command:
+```bash
+[amanpandey@aman-fedora ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS      NAMES
+f42b6cda4b59   redis     "docker-entrypoint.s…"   About an hour ago   Up About an hour   6379/tcp   flamboyant_nobel
+[amanpandey@aman-fedora ~]$ docker stop f42b6cda4b59
+f42b6cda4b59
+[amanpandey@aman-fedora ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES   #now u can see there is no running containers present
+```
+- Use the **docker start** command to restart the container:
+```bash
+docker start 42b6cda4b59
+```
+- To remove a container, run **docker rm** with the container’s ID or name:
+```bash
+docker rm 42b6cda4b59  #container must stop before removing
+```
+- If the container’s running, you’ll need to add the **--force** flag to confirm your intentions:
+```bash
+docker rm 42b6cda4b59 --force
+```
+
+8. **Removing Images**
+- To delete an image, pass its ID or tag to docker rmi:
+```bash
+docker rmi redis
+```
+**Note:** Images can’t be deleted if they’re being used by a running or stopped container. Remove all the containers associated with it first, then remove image.
+
